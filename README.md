@@ -147,6 +147,7 @@ Options:
   -V,    --version             Print the package version.
          --n number            Number of characters to trim.
          --chars str           Characters to trim. Default: whitespace.
+         --split sep           Delimiter for stdin data. Default: '/\\r?\\n/'.
 ```
 
 </section>
@@ -156,6 +157,20 @@ Options:
 <!-- CLI usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
 <section class="notes">
+
+### Notes
+
+-   If the split separator is a [regular expression][mdn-regexp], ensure that the `split` option is either properly escaped or enclosed in quotes.
+
+    ```bash
+    # Not escaped...
+    $ echo -n $'   foo   \n   bar   ' | rtrimn --n=3 --split /\r?\n/
+
+    # Escaped...
+    $ echo -n $'   foo   \n   bar   ' | rtrimn --n=3 --split /\\r?\\n/
+    ```
+
+-   The implementation ignores trailing delimiters.
 
 </section>
 
@@ -175,8 +190,17 @@ $ rtrimn '   Whitespace   ' --n=3
 To use as a [standard stream][standard-streams],
 
 ```bash
-$ echo -n '~beep~boop~~~' | rtrimn --n=2 --chars='~'
+$ echo -n '~beep~boop~~~' | rtrimn --n=2 --chars '~'
 ~beep~boop~
+```
+
+By default, when used as a [standard stream][standard-streams], the implementation assumes newline-delimited data. To specify an alternative delimiter, set the `split` option.
+
+```bash
+$ echo -n '~~~foo~~~\t~~~bar~~~\t~~~baz~~~' | rtrimn --split '\t' --chars '~' --n=3
+~~~foo
+~~~bar
+~~~baz
 ```
 
 </section>
@@ -259,6 +283,8 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 [stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/string-right-trim-n/main/LICENSE
+
+[mdn-regexp]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 
 [standard-streams]: https://en.wikipedia.org/wiki/Standard_streams
 
