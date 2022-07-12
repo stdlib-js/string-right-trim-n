@@ -41,7 +41,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import rtrimN from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-right-trim-n@v0.0.2-deno/mod.js';
+import rtrimN from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-right-trim-n@deno/mod.js';
 ```
 
 #### rtrimN( str, n\[, chars] )
@@ -89,7 +89,7 @@ out = rtrimN( str, str.length, '🐶 ' );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import rtrimN from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-right-trim-n@v0.0.2-deno/mod.js';
+import rtrimN from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-right-trim-n@deno/mod.js';
 
 var out = rtrimN( '   Whitespace   ', 3 );
 // returns '   Whitespace'
