@@ -45,19 +45,31 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/string-right-trim-n
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+-   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import rtrimN from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-right-trim-n@esm/index.mjs';
-```
-The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/string-right-trim-n/tags). For example,
-
-```javascript
-import rtrimN from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-right-trim-n@v0.1.0-esm/index.mjs';
+var rtrimN = require( '@stdlib/string-right-trim-n' );
 ```
 
 #### rtrimN( str, n\[, chars] )
@@ -104,13 +116,8 @@ out = rtrimN( str, str.length, '🐶 ' );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import rtrimN from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-right-trim-n@esm/index.mjs';
+```javascript
+var rtrimN = require( '@stdlib/string-right-trim-n' );
 
 var out = rtrimN( '   Whitespace   ', 3 );
 // returns '   Whitespace'
@@ -120,10 +127,6 @@ out = rtrimN( '\t\t\tTabs\t\t\t', 2 );
 
 out = rtrimN( '~~~CUSTOM~~~', 3, '~' );
 // returns '~~~CUSTOM'
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -133,7 +136,102 @@ out = rtrimN( '~~~CUSTOM~~~', 3, '~' );
 
 <!-- Section for describing a command-line interface. -->
 
+* * *
 
+<section class="cli">
+
+## CLI
+
+<section class="installation">
+
+## Installation
+
+To use as a general utility, install the CLI package globally
+
+```bash
+npm install -g @stdlib/string-right-trim-n-cli
+```
+
+</section>
+<!-- CLI usage documentation. -->
+
+
+<section class="usage">
+
+### Usage
+
+```text
+Usage: rtrimn [options] --n=<number>
+
+Options:
+
+  -h,    --help                Print this message.
+  -V,    --version             Print the package version.
+         --n number            Number of characters to trim.
+         --chars str           Characters to trim. Default: whitespace.
+         --split sep           Delimiter for stdin data. Default: '/\\r?\\n/'.
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- CLI usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+### Notes
+
+-   If the split separator is a [regular expression][mdn-regexp], ensure that the `split` option is either properly escaped or enclosed in quotes.
+
+    ```bash
+    # Not escaped...
+    $ echo -n $'   foo   \n   bar   ' | rtrimn --n=3 --split /\r?\n/
+
+    # Escaped...
+    $ echo -n $'   foo   \n   bar   ' | rtrimn --n=3 --split /\\r?\\n/
+    ```
+
+-   The implementation ignores trailing delimiters.
+
+</section>
+
+<!-- /.notes -->
+
+<!-- CLI usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```bash
+$ rtrimn '   Whitespace   ' --n=3
+   Whitespace
+```
+
+To use as a [standard stream][standard-streams],
+
+```bash
+$ echo -n '~beep~boop~~~' | rtrimn --n=2 --chars '~'
+~beep~boop~
+```
+
+By default, when used as a [standard stream][standard-streams], the implementation assumes newline-delimited data. To specify an alternative delimiter, set the `split` option.
+
+```bash
+$ echo -n '~~~foo~~~\t~~~bar~~~\t~~~baz~~~' | rtrimn --split '\t' --chars '~' --n=3
+~~~foo
+~~~bar
+~~~baz
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.cli -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -160,7 +258,7 @@ out = rtrimN( '~~~CUSTOM~~~', 3, '~' );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -190,8 +288,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/string-right-trim-n.svg
 [npm-url]: https://npmjs.org/package/@stdlib/string-right-trim-n
 
-[test-image]: https://github.com/stdlib-js/string-right-trim-n/actions/workflows/test.yml/badge.svg?branch=v0.1.0
-[test-url]: https://github.com/stdlib-js/string-right-trim-n/actions/workflows/test.yml?query=branch:v0.1.0
+[test-image]: https://github.com/stdlib-js/string-right-trim-n/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/string-right-trim-n/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/string-right-trim-n/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/string-right-trim-n?branch=main
