@@ -246,6 +246,13 @@ $ echo -n '~~~foo~~~\t~~~bar~~~\t~~~baz~~~' | rtrimn --split '\t' --chars '~' --
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   <span class="package-name">[`@stdlib/string-left-trim-n`][@stdlib/string/left-trim-n]</span><span class="delimiter">: </span><span class="description">trim `n` characters from the beginning of a string.</span>
+-   <span class="package-name">[`@stdlib/string-trim`][@stdlib/string/trim]</span><span class="delimiter">: </span><span class="description">trim whitespace characters from the beginning and end of a string.</span>
+
 </section>
 
 <!-- /.related -->
@@ -329,6 +336,14 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [mdn-regexp]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 
 [standard-streams]: https://en.wikipedia.org/wiki/Standard_streams
+
+<!-- <related-links> -->
+
+[@stdlib/string/left-trim-n]: https://github.com/stdlib-js/string-left-trim-n
+
+[@stdlib/string/trim]: https://github.com/stdlib-js/string-trim
+
+<!-- </related-links> -->
 
 </section>
 
