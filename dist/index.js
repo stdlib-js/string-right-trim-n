@@ -1,0 +1,5 @@
+"use strict";var l=function(i,r){return function(){return r||i((r={exports:{}}).exports,r),r.exports}};var p=l(function(R,f){
+var o=require('@stdlib/assert-is-string/dist').isPrimitive,m=require('@stdlib/string-split-grapheme-clusters/dist'),E=require('@stdlib/assert-is-nonnegative-integer/dist').isPrimitive,q=require('@stdlib/assert-is-string-array/dist').primitives,w=require('@stdlib/string-replace/dist'),g=require('@stdlib/utils-escape-regexp-string/dist'),s=require('@stdlib/error-tools-fmtprodmsg/dist'),d=" \f\n\r	\v\xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000\uFEFF";function S(i,r,e){var a,t,n,v,u;if(!o(i))throw new TypeError(s('1PP3B',i));if(!E(r))throw new TypeError(s('1PP2K',r));if(arguments.length>2){if(n=o(e),!n&&!q(e))throw new TypeError(s('1PPAV',e));for(n&&(e=m(e)),a=e.length-1,t="",u=0;u<a;u++)t+=g(e[u]),t+="|";t+=g(e[a]),v=new RegExp("(?:"+t+"){0,"+r+"}$")}else v=new RegExp("["+d+"]{0,"+r+"}$");return w(i,v,"")}f.exports=S
+});var y=p();module.exports=y;
+/** @license Apache-2.0 */
+//# sourceMappingURL=index.js.map
