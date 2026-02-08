@@ -217,16 +217,16 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/string-right-trim-n-cli.svg
 [npm-url]: https://npmjs.org/package/@stdlib/string-right-trim-n-cli
 
-[test-image]: https://github.com/stdlib-js/string-right-trim-n/actions/workflows/test.yml/badge.svg?branch=v0.2.3
-[test-url]: https://github.com/stdlib-js/string-right-trim-n/actions/workflows/test.yml?query=branch:v0.2.3
+[test-image]: https://github.com/stdlib-js/string-right-trim-n@v0.2.3/actions/workflows/test.yml/badge.svg?branch=v0.2.3
+[test-url]: https://github.com/stdlib-js/string-right-trim-n@v0.2.3/actions/workflows/test.yml?query=branch:v0.2.3
 
-[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/string-right-trim-n/main.svg
-[coverage-url]: https://codecov.io/github/stdlib-js/string-right-trim-n?branch=main
+[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/string-right-trim-n@v0.2.3/main.svg
+[coverage-url]: https://codecov.io/github/stdlib-js/string-right-trim-n@v0.2.3?branch=main
 
 <!--
 
-[dependencies-image]: https://img.shields.io/david/stdlib-js/string-right-trim-n.svg
-[dependencies-url]: https://david-dm.org/stdlib-js/string-right-trim-n/main
+[dependencies-image]: https://img.shields.io/david/stdlib-js/string-right-trim-n@v0.2.3.svg
+[dependencies-url]: https://david-dm.org/stdlib-js/string-right-trim-n@v0.2.3/main
 
 -->
 
@@ -237,22 +237,22 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
 
-[cli-section]: https://github.com/stdlib-js/string-right-trim-n#cli
-[cli-url]: https://github.com/stdlib-js/string-right-trim-n/tree/cli
-[@stdlib/string-right-trim-n]: https://github.com/stdlib-js/string-right-trim-n/tree/main
+[cli-section]: https://github.com/stdlib-js/string-right-trim-n@v0.2.3#cli
+[cli-url]: https://github.com/stdlib-js/string-right-trim-n@v0.2.3/tree/cli
+[@stdlib/string-right-trim-n]: https://github.com/stdlib-js/string-right-trim-n@v0.2.3/tree/main
 
 [umd]: https://github.com/umdjs/umd
 [es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
-[deno-url]: https://github.com/stdlib-js/string-right-trim-n/tree/deno
-[deno-readme]: https://github.com/stdlib-js/string-right-trim-n/blob/deno/README.md
-[umd-url]: https://github.com/stdlib-js/string-right-trim-n/tree/umd
-[umd-readme]: https://github.com/stdlib-js/string-right-trim-n/blob/umd/README.md
-[esm-url]: https://github.com/stdlib-js/string-right-trim-n/tree/esm
-[esm-readme]: https://github.com/stdlib-js/string-right-trim-n/blob/esm/README.md
-[branches-url]: https://github.com/stdlib-js/string-right-trim-n/blob/main/branches.md
+[deno-url]: https://github.com/stdlib-js/string-right-trim-n@v0.2.3/tree/deno
+[deno-readme]: https://github.com/stdlib-js/string-right-trim-n@v0.2.3/blob/deno/README.md
+[umd-url]: https://github.com/stdlib-js/string-right-trim-n@v0.2.3/tree/umd
+[umd-readme]: https://github.com/stdlib-js/string-right-trim-n@v0.2.3/blob/umd/README.md
+[esm-url]: https://github.com/stdlib-js/string-right-trim-n@v0.2.3/tree/esm
+[esm-readme]: https://github.com/stdlib-js/string-right-trim-n@v0.2.3/blob/esm/README.md
+[branches-url]: https://github.com/stdlib-js/string-right-trim-n@v0.2.3/blob/main/branches.md
 
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/string-right-trim-n/main/LICENSE
+[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/string-right-trim-n@v0.2.3/main/LICENSE
 
 [mdn-regexp]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 
